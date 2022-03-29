@@ -2,6 +2,7 @@
 # Comp Prog 2
 # No Cheating
 
+from re import X
 import tkinter as tk
 
 window = tk.Tk()
@@ -17,22 +18,24 @@ black = black.zoom(2)
 white = white.zoom(2)
 empty = empty.zoom(2)
 
-button = tk.Button(image=black)
-button.grid(column=0,row=0)
-
 def place(bStarts,wStarts,bMoves,wMoves,size=19):
     """This is given starting positions and outputs a board"""
     for x in range(size):
         for y in range(size):
-            if (x,y) in bStarts:
+            if f"({x},{y})" in bStarts:
                 black_stone = tk.Button(image=black)
                 black_stone.grid(column=x,row=y)
-            elif (x,y) in wStarts:
+            elif f"({x},{y})" in wStarts:
                 white_stone = tk.Button(image=white)
                 white_stone.grid(column=x,row=y)
             else:
                 point = tk.Button(image=empty)
                 point.grid(column=x,row=y)
 
+
+x = ['(0,0)']
+y = ['(2,2)']
+
+place(x,y,0,0)
 
 tk.mainloop()
