@@ -1,14 +1,16 @@
 import tkinter as tk
 
 window = tk.Tk()
-window.title("Hello wold")
-window.geometry("300x300")
+window.title("goban")
+
 
 # create a photoimage variable
-img = tk.PhotoImage(file='vector.png')
+black = tk.PhotoImage(file='goBLACK.png')
+white = tk.PhotoImage(file='goWHITE.png')
+empty = tk.PhotoImage(file='goEMPTY.png')
+black = black.zoom(2)
 
-
-hello = tk.Label(image=img)
+hello = tk.Label(image=black)
 hello.pack()
 button = tk.Button(text="Click me!")
 button.pack()
