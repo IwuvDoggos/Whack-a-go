@@ -18,6 +18,10 @@ black = black.zoom(2)
 white = white.zoom(2)
 empty = empty.zoom(2)
 
+# collect data from me to create a board
+
+
+# Generate Board from my input
 def place(bStarts,wStarts,change,size=19):
     """This is given starting positions and outputs a board"""
     for x in range(size):
