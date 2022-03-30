@@ -41,6 +41,13 @@ def place(bStarts,wStarts,change,size=19):
                 point = tk.Button(image=empty)
                 point.grid(column=x,row=y)
 
+def place_on_list(board):
+    """Generates Board from a 2d list"""
+    print('Hello World')
+
+def change_board(board,changes):
+    """Changes a 2d board list, based on inputs in a list RETURNS A BOARD"""
+    print('Board')
 
 x = ['(0,0)']
 y = ['(2,2)']
